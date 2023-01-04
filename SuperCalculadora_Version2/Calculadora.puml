@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Calculadora{
+    + suma(n1: Numero,n2: Numero): Numero
+}
+class Numero{
+    - valor: int
+    - representación: String
+}
+class Decimal{
+
+}
+class Hexadecimal{
+}
+class Octal{
+}
+
+Calculadora --> Numero
+Numero <|-- Decimal
+Numero <|-- Hexadecimal
+Numero <|-- Octal
+
+@enduml
