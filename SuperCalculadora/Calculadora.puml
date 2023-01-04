@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Class Calculadora {
++ Sumar(sumando, sumando2) : double
++ Restar(minuendo, sustraendo) : double
++ Dividir(dividendo, divisor) : double
+}
+abstract Class Operaciones {
+- nombre : String
++ calcularOperacion(numero1, numero2) : double
+}
+Class Suma {
+
+}
+Class Resta {
+
+}
+Class Division {
+
+}
+
+Calculadora --> "*" Operaciones
+Operaciones <|-- Suma
+Operaciones <|--- Resta
+Operaciones <|-- Division
+
+@enduml
